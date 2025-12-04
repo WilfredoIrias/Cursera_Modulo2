@@ -1,0 +1,13 @@
+<ActionBar [title]="item?.nombre"></ActionBar>
+
+<ScrollView>
+    <StackLayout class="content">
+
+        <Image [src]="item?.imagen" width="200" height="200"></Image>
+
+        <Label [text]="'Litros procesados: ' + item?.litrosProcesados"></Label>
+        <Label [text]="'Categoría: ' + item?.categoria"></Label>
+        <Label [text]="item?.descripcion" textWrap="true"></Label>
+
+    </StackLayout>
+</ScrollView>

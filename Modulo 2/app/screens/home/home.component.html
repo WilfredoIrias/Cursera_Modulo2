@@ -1,0 +1,39 @@
+<ActionBar title="DescremApp"></ActionBar>
+
+<StackLayout>
+
+    <TextField hint="Buscar descremadora..."
+               [(ngModel)]="busqueda"
+               class="input"></TextField>
+
+    <PullToRefresh (refresh)="onRefresh($event)">
+
+        <ListView [items]="filtrar()" (itemTap)="irDetalle($event)">
+            <ng-template let-item="item">
+
+                <FlexboxLayout flexDirection="row" class="itemBox">
+
+                    <Image [src]="item.imagen"
+                           width="80"
+                           height="80"
+                           (doubleTap)="animarIcono($event)">
+                    </Image>
+
+                    <StackLayout class="itemInfo">
+                        <Label [text]="item.nombre" class="title"></Label>
+                        <Label [text]="'Litros: ' + item.litrosProcesados"></Label>
+
+                        <Button text="Cambiar categoría"
+                                class="btnCat"
+                                (tap)="cambiarCategoria(item)">
+                        </Button>
+                    </StackLayout>
+
+                </FlexboxLayout>
+
+            </ng-template>
+        </ListView>
+
+    </PullToRefresh>
+
+</StackLayout>

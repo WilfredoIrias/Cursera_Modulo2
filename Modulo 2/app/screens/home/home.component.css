@@ -1,0 +1,5 @@
+.input { margin: 10; padding: 10; font-size: 18; }
+.itemBox { padding: 10; border-bottom-width: 1; border-color: #ccc; }
+.itemInfo { margin-left: 15; }
+.title { font-size: 20; font-weight: bold; }
+.btnCat { margin-top: 5; background-color: #4682B4; color: white; border-radius: 5; }

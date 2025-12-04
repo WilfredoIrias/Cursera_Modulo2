@@ -1,0 +1,17 @@
+<ActionBar title="Agregar Descremadora"></ActionBar>
+
+<StackLayout padding="20">
+
+    <TextField [(ngModel)]="nombre"
+               minLen
+               hint="Nombre (mínimo 4 letras)">
+    </TextField>
+
+    <Label *ngIf="error"
+           text="El nombre debe tener al menos 4 caracteres"
+           class="error">
+    </Label>
+
+    <Button text="Guardar" (tap)="guardar()" class="btnSave"></Button>
+
+</StackLayout>
